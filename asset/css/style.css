@@ -12,23 +12,68 @@
 }
 header
 {
-    width: 80%;
+    width: 50%;
     height: 20%;
     margin: 0 auto;
     background-color: #FDBB40;
 }
+header h1
+{
+    padding: 2rem;
+}
 main
 {
-    width: 80%;
+    width: 50%;
     height: 65%;
     margin: 0 auto;
     background-color: #fff;
+    text-align: center;
+}
+main h2
+{
+    padding: 2rem;
 }
 footer
 {
-    width: 80%;
+    width: 50%;
     height: 15%;
     margin: 0 auto;
     background-color: #d33359;
     color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section
+{
+    width: 60%;
+    height: 30%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.form_discount
+{
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.form_discount input
+{
+    width: 70%;
+    background-color: #fdbb4060;
+}
+main button
+{
+    background-color: #FDBB40;
+    padding: .5rem 1rem;
+}
+
+footer span
+{
+    font-size: 1.5rem;
+    padding: 2rem;
 }
