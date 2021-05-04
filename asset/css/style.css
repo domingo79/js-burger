@@ -12,6 +12,7 @@
 }
 header
 {
+    position: relative;
     width: 50%;
     height: 20%;
     margin: 0 auto;
@@ -20,6 +21,15 @@ header
 header h1
 {
     padding: 2rem;
+}
+header img
+{
+    position: absolute;
+    top: -20px;
+    right: -25px;
+    height: 150%;
+
+    
 }
 main
 {
