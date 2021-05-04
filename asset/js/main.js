@@ -34,3 +34,25 @@ function rendeInput(lista, elementi) {
 var ingredientiElements = document.querySelector('.ingredienti');
 rendeInput(ingredienti, ingredientiElements);
 
+document.querySelector('button').addEventListener('click', function () {
+
+    var burgerBasic = 3.99;
+    console.log(burgerBasic);
+
+    var checkIngredienti = document.querySelectorAll("input[type='checkbox']");
+    //console.log(checkIngredienti);
+
+    var sumIngredients = null;
+
+    for (var i = 0; i < checkIngredienti.length; i++) {
+        var element = checkIngredienti[i];
+        if (element.checked) {
+            sumIngredients += Number(element.getAttribute('data-price'))
+        }
+    }
+    console.log(sumIngredients);
+
+    var totalBurger = burgerBasic + sumIngredients;
+
+    document.getElementById('price').innerHTML = '€ ' + totalBurger;
+})
