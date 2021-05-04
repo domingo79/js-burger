@@ -1,0 +1,34 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container
+{
+    width: 100%;
+    height: 100vh;
+    background-color: #FFF5E2;
+}
+header
+{
+    width: 80%;
+    height: 20%;
+    margin: 0 auto;
+    background-color: #FDBB40;
+}
+main
+{
+    width: 80%;
+    height: 65%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+footer
+{
+    width: 80%;
+    height: 15%;
+    margin: 0 auto;
+    background-color: #d33359;
+    color: #fff;
+}
