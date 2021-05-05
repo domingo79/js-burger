@@ -52,27 +52,25 @@ document.querySelector('button').addEventListener('click', function () {
     }
     //console.log(sumIngredients);
 
-    var totalBurger = (burgerBasic + sumIngredients);
+    var totalBurger = burgerBasic + sumIngredients;
 
     var discount = ['cp10', 'cp15', 'cp20'];
 
-    var controlloCP = document.querySelector('#discount').value;
+    var controlloCP = document.querySelector('#discount');
 
-    if (discount.includes(controlloCP) && controlloCP == 'cp10') {
-        totalBurger -= totalBurger * 0.1;
-        //console.log('hai uno sconto 10 ' + totalBurger);
-    } else if (discount.includes(controlloCP) && controlloCP == 'cp15') {
-        totalBurger -= totalBurger * 0.15;
-        //console.log('hai uno sconto 15 ' + totalBurger);
-    } else if (discount.includes(controlloCP) && controlloCP == 'cp20') {
-        totalBurger -= totalBurger * 0.20;
-        //console.log('hai uno sconto 20 ' + totalBurger);
-    } else {
-        //console.log('prezzo pieno');
+    var sconto = applicaSconto(controlloCP, discount, totalBurger);
+
+    function applicaSconto(elem, lista, prezzo) {
+        //  verificare il valore inserito del coupon 
+        if (lista.includes(elem.value)) {
+            console.log('applica lo sconto');
+            prezzo -= prezzo * 0.10;
+            console.log('prezzo');
+            return prezzo;
+        }
+        return prezzo;
     }
 
-    document.getElementById('price').innerHTML = '€ ' + totalBurger;
+    document.getElementById('price').innerHTML = '€ ' + totalBurger.toFixed(2);
+    document.getElementById('price').innerHTML = '€ ' + sconto.toFixed(2);
 })
-
-
-
