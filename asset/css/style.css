@@ -54,17 +54,17 @@ footer
     justify-content: space-between;
     align-items: center;
 }
-section
-{
-    width: 60%;
-    height: 25%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-between;
-}
+.ingredienti {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+      ". ."
+      ". ."
+      ". .";
+  }
+  
 .form_discount
 {
     width: 100%;
